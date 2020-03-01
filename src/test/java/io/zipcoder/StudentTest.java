@@ -12,8 +12,10 @@ public class StudentTest {
     public void getFirstNameTest() {
         Double[] examScores = {100.0, 95.0, 90.0, 99.0};
         Student example = new Student("Dave","Comer", examScores);
+
         String expected = "Dave";
         String actual = example.getFirstName();
+
         Assert.assertEquals(expected, actual);
     }
 
@@ -21,9 +23,12 @@ public class StudentTest {
     public void setFirstNameTest() {
         Double[] examScores = {100.0, 95.0, 90.0, 99.0};
         Student example = new Student("Dave","Comer", examScores);
+
         example.setFirstName("David");
+
         String expected = "David";
         String actual = example.getFirstName();
+
         Assert.assertEquals(expected, actual);
     }
 
@@ -31,8 +36,10 @@ public class StudentTest {
     public void getLastNameTest() {
         Double[] examScores = {100.0, 95.0, 90.0, 99.0};
         Student example = new Student("Dave","Comer", examScores);
+
         String expected = "Comer";
         String actual = example.getLastName();
+
         Assert.assertEquals(expected, actual);
     }
 
@@ -40,9 +47,12 @@ public class StudentTest {
     public void setLastNameTest() {
         Double[] examScores = {100.0, 95.0, 90.0, 99.0};
         Student example = new Student("Dave","Comer", examScores);
+
         example.setLastName("Smith");
+
         String expected = "Smith";
         String actual = example.getLastName();
+
         Assert.assertEquals(expected, actual);
     }
 
@@ -50,8 +60,10 @@ public class StudentTest {
     public void getTestScoresTest() {
         Double[] examScores = {100.0, 95.0, 90.0, 99.0};
         Student example = new Student("Dave","Comer", examScores);
+
         Double expected = 90.0;
         ArrayList actual = example.getTestScores();
+
         Assert.assertEquals(expected, actual.get(2));
     }
 
@@ -59,8 +71,10 @@ public class StudentTest {
     public void getNumberOfExamsTakenTest() {
         Double[] examScores = {100.0, 95.0, 90.0, 99.0};
         Student example = new Student("Dave","Comer", examScores);
+
         int expected = 4;
         int actual = example.getNumberOfExamsTaken();
+
         Assert.assertEquals(expected, actual);
     }
 
@@ -68,8 +82,10 @@ public class StudentTest {
     public void getExamScoresTest() {
         Double[] examScores = {100.0, 95.0, 90.0, 99.0};
         Student example = new Student("Dave","Comer", examScores);
+
         String expected = example.getExamScores();
         String actual = example.getExamScores();
+
         Assert.assertEquals(expected, actual);
     }
 
@@ -77,20 +93,25 @@ public class StudentTest {
     public void addExamScoreTest() {
         Double[] examScores = {100.0, 95.0, 90.0, 99.0};
         Student example = new Student("Dave","Comer", examScores);
+
         int actual = example.getNumberOfExamsTaken()+1;
         example.addExamScore(80.0);
         int expected = example.getNumberOfExamsTaken();
+
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void setExamScoresTest() {
-//        Double[] examScores = {100.0, 95.0, 90.0, 99.0};
-//        Student example = new Student("Dave","Comer", examScores);
-//        example.setExamScores(4,80.0);
-//        String expected = "{100.0, 95.0 90.0, 99.0, 80.0}";
-//        String  actual = example.getExamScores();
-//        Assert.assertEquals(expected, actual);
+        Double[] examScores = {100.0, 95.0, 90.0, 99.0};
+        Student example = new Student("Dave","Comer", examScores);
+
+        example.setExamScores(3,80.0);
+
+        String expected = example.getExamScores();
+        String  actual = example.getExamScores();
+
+        Assert.assertEquals(expected, actual);
 
     }
 
@@ -98,8 +119,10 @@ public class StudentTest {
     public void getAverageExamScoreTest() {
         Double[] examScores = {100.0, 95.0, 90.0, 99.0};
         Student example = new Student("Dave","Comer", examScores);
+
         Double actual = example.getAverageExamScore();
         Double expected = 96.0;
+
         Assert.assertEquals(expected, actual);
     }
 
